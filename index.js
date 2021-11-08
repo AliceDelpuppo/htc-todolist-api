@@ -1,12 +1,12 @@
 import express, { request, response } from 'express'
-import http from 'http'
+// import http from 'http'
 import dotenv from 'dotenv'
 
 dotenv.config()
 
 const app = express()
 
-const server = http.createServer(app)
+// const server = http.createServer(app)
 
 const PORT = process.env.PORT
 
@@ -41,6 +41,6 @@ app.get('/ping', (request, response) => {
     response.send('pong') // responder. Enviar a resposta para o front
 })
 
-server.listen(PORT, () => { // 3333 é a porta
+app.listen(PORT, () => { // 3333 é a porta
     console.log('iniciou o server')
 })
